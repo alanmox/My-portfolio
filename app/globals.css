@@ -128,24 +128,6 @@
   --color-brand-teal: var(--brand-teal);
   --color-brand-glow: var(--brand-glow);
   --color-brand-deep: var(--brand-deep);
-  @keyframes terminal-blink {
-  0%, 100% {
-    opacity: 0;
-    }
-  50% {
-    opacity: 1;
-    }
-  }
-  @keyframes terminal-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(2px);
-    }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    }
-  }
 }
 
 @layer base {
@@ -302,12 +284,3 @@
   }
 }
 
-.terminal-cursor::after {
-    content: "|";
-    margin-left: 2px;
-    animation: terminal-blink 1s infinite;
-}
-
-.terminal-line {
-    animation: terminal-fade-in 0.3s ease-in-out;
-}

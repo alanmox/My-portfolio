@@ -14,7 +14,7 @@ import {
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { ScrollAnimationTrigger } from '@/components/ui/scroll-animation-trigger'
-import { TerminalBackground } from '@/components/terminal-background'
+import { FireworksBackground } from '@/components/animate-ui/components/backgrounds/fireworks'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -168,7 +168,15 @@ const metrics = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
+      <FireworksBackground
+        population={1}
+        fireworkSpeed={{ min: 4, max: 8 }}
+        fireworkSize={{ min: 2, max: 4 }}
+        particleSpeed={{ min: 2, max: 6 }}
+        particleSize={{ min: 1, max: 3 }}
+        className="fixed inset-0 pointer-events-none z-0 opacity-20"
+      />
       <header className="glass-nav fixed top-0 left-0 right-0 z-50">
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 md:px-8 lg:px-10">
           <Link href="#home" className="flex items-center gap-2.5 text-sm font-bold tracking-tight text-foreground">
@@ -203,7 +211,7 @@ export default function HomePage() {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10">
         <ScrollAnimationTrigger effect="fade" delay={0.1}>
         <section id="home" className="grid-glow hero-gradient relative mt-20 mb-8 overflow-hidden rounded-[2rem] border border-border px-5 py-10 sm:rounded-[2.5rem] sm:px-10 sm:py-14 md:mt-24 md:px-14 md:py-16 lg:mt-28">
-          <TerminalBackground />
+
           <div className="relative grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div className="space-y-8">
               <div className="space-y-6">
@@ -212,7 +220,7 @@ export default function HomePage() {
                   <span>Full-Stack Developer &bull; Cloud Engineer</span>
                 </Badge>
                 <h1 className="max-w-4xl text-4xl font-bold tracking-[-0.05em] leading-[1.1] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-                  Hi, I&apos;m Allan — I build
+                  Hi, I&apos;m Alanmox — I build
                   <span className="gradient-text"> web apps, APIs & mobile products</span>{' '}
                   that ship to production.
                 </h1>
@@ -258,7 +266,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <Card className="premium-surface relative overflow-hidden">
+            <Card className="relative overflow-hidden bg-transparent backdrop-blur-sm border-white/10 dark:border-white/20">
               <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-br from-accent/90 via-accent/70 to-brand-glow/60" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_60%)]" />
               <CardHeader className="relative z-10 pt-10">

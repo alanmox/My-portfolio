@@ -594,13 +594,13 @@ export default function HomePage() {
                   <span>WhatsApp: +255 629 360 383</span>
                 </div>
                 <div className="flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 backdrop-blur-sm sm:w-auto">
-                  <Link href="https://youtube.com/@alanmox" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white" aria-label="YouTube">
+                  <Link href="https://youtube.com/@allantech441" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white" aria-label="YouTube">
                     <Youtube className="size-4" />
                     <span>YouTube</span>
                   </Link>
                 </div>
                 <div className="flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 backdrop-blur-sm sm:w-auto">
-                  <Link href="https://tiktok.com/@alanmox" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white" aria-label="TikTok">
+                  <Link href="https://www.tiktok.com/@allan_tech441" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white" aria-label="TikTok">
                     <Music2 className="size-4" />
                     <span>TikTok</span>
                   </Link>

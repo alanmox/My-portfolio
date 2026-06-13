@@ -7,9 +7,11 @@ import {
   Globe,
   Mail,
   MoveRight,
+  Music2,
   Rocket,
   Sparkles,
   Wrench,
+  Youtube,
 } from 'lucide-react'
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
@@ -590,6 +592,18 @@ export default function HomePage() {
                 <div className="flex w-full items-center gap-3 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm text-white/90 backdrop-blur-sm sm:w-auto">
                   <Globe className="size-4" />
                   <span>WhatsApp: +255 629 360 383</span>
+                </div>
+                <div className="flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 backdrop-blur-sm sm:w-auto">
+                  <Link href="https://youtube.com/@alanmox" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white" aria-label="YouTube">
+                    <Youtube className="size-4" />
+                    <span>YouTube</span>
+                  </Link>
+                </div>
+                <div className="flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2.5 backdrop-blur-sm sm:w-auto">
+                  <Link href="https://tiktok.com/@alanmox" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-white/90 transition-colors hover:text-white" aria-label="TikTok">
+                    <Music2 className="size-4" />
+                    <span>TikTok</span>
+                  </Link>
                 </div>
               </div>
               <Button

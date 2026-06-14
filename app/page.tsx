@@ -16,6 +16,7 @@ import {
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { ScrollAnimationTrigger } from '@/components/ui/scroll-animation-trigger'
+import { ProjectImageCarousel } from '@/components/project-image-carousel'
 import { FireworksBackground } from '@/components/animate-ui/components/backgrounds/fireworks'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
@@ -59,6 +60,7 @@ const projects = [
       'Mobile expense tracking app for practical day-to-day financial logging with transaction history, balance visibility, and clean user flows.',
     stack: ['React Native', 'Expo', 'JavaScript', 'Mobile UX'],
     label: 'Fintech Mobile App',
+    images: ['/matumiziapp1.jpg', '/matumiziapp2.jpg'],
     downloadHref: 'https://github.com/alanmox/MATUMIZI-APP/actions/runs/27353127136/artifacts/7568127846',
     problem:
       'Users needed a simple way to track day-to-day money movement without complicated financial software.',
@@ -73,6 +75,7 @@ const projects = [
       'Worldwide automated SMM panel for buying followers, likes, views, and engagement across Facebook, Instagram, YouTube, TikTok, and more.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
     label: 'SaaS Platform',
+    image: '/revonsmm1.png',
     href: 'https://revonsmm.com',
     problem:
       'Users needed a fast, affordable, and reliable way to grow social media presence without sharing passwords or dealing with slow delivery.',
@@ -87,6 +90,7 @@ const projects = [
       'Cloud-based messaging automation platform for connecting and automating messaging across channels with speed and security.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Cloud API'],
     label: 'SaaS Platform',
+    image: '/revonbot1.png',
     href: 'https://revonbot.com',
     problem:
       'Businesses needed a fast, secure, and professional way to automate messaging without complex setup or maintenance.',
@@ -392,21 +396,35 @@ export default function HomePage() {
                 key={project.title}
                 className="premium-surface card-hover group overflow-hidden"
               >
-                <div className="relative h-40 bg-gradient-to-br from-accent/80 via-accent/60 to-brand-glow/40 sm:h-44">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.25),transparent_40%)]" />
-                  <div className="absolute left-5 right-5 top-5 rounded-xl border border-white/15 bg-white/10 p-3.5 backdrop-blur-sm">
-                    <div className="mb-3 flex items-center gap-1.5">
-                      <span className="size-2 rounded-full bg-white/80" />
-                      <span className="size-2 rounded-full bg-white/60" />
-                      <span className="size-2 rounded-full bg-white/40" />
-                    </div>
-                    <div className="grid gap-1.5">
-                      <div className="h-2 w-3/5 rounded-full bg-white/70" />
-                      <div className="h-2 w-full rounded-full bg-white/25" />
-                      <div className="h-2 w-4/5 rounded-full bg-white/25" />
+                {project.images ? (
+                  <ProjectImageCarousel images={project.images} alt={project.title} />
+                ) : project.image ? (
+                  <div className="relative h-48 sm:h-56 overflow-hidden bg-black/20">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      fill
+                      className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative h-40 bg-gradient-to-br from-accent/80 via-accent/60 to-brand-glow/40 sm:h-44">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.25),transparent_40%)]" />
+                    <div className="absolute left-5 right-5 top-5 rounded-xl border border-white/15 bg-white/10 p-3.5 backdrop-blur-sm">
+                      <div className="mb-3 flex items-center gap-1.5">
+                        <span className="size-2 rounded-full bg-white/80" />
+                        <span className="size-2 rounded-full bg-white/60" />
+                        <span className="size-2 rounded-full bg-white/40" />
+                      </div>
+                      <div className="grid gap-1.5">
+                        <div className="h-2 w-3/5 rounded-full bg-white/70" />
+                        <div className="h-2 w-full rounded-full bg-white/25" />
+                        <div className="h-2 w-4/5 rounded-full bg-white/25" />
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
                 <CardHeader className="space-y-3 p-5 pb-3 sm:p-6 sm:pb-3">
                   <div className="flex items-center justify-between gap-3">
                     <Badge variant="outline" className="text-muted-foreground bg-secondary/30">

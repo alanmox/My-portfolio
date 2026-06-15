@@ -61,7 +61,7 @@ const projects = [
     stack: ['React Native', 'Expo', 'JavaScript', 'Mobile UX'],
     label: 'Fintech Mobile App',
     images: ['/matumiziapp1.jpg', '/matumiziapp2.jpg'],
-    downloadHref: 'https://github.com/alanmox/MATUMIZI-APP/actions/runs/27353127136/artifacts/7568127846',
+    downloadHref: 'https://github.com/alanmox/matumizi-app-apk/releases/download/v1.0.0/app-release-apk.zip',
     problem:
       'Users needed a simple way to track day-to-day money movement without complicated financial software.',
     solution:
@@ -105,6 +105,7 @@ const projects = [
       'High-performance DNS tunneling solution with user management, service controls, and operational commands for Ubuntu server environments.',
     stack: ['Rust', 'Bash', 'Ubuntu', 'Systemd'],
     label: 'Infrastructure Product',
+    image: '/dnstunnel1.jpg',
     href: 'https://github.com/alanmox/allanmox-dns',
     problem:
       'Teams and operators needed a manageable DNS tunneling setup that is fast, reliable, and easier to operate on Ubuntu VPS environments.',
@@ -119,6 +120,7 @@ const projects = [
       'Camera-assisted thumb capture and printable workflow for intake teams, designed for practical field operations and mobile device compatibility.',
     stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     label: 'Business Workflow App',
+    image: '/thumbintake1.jpg',
     href: 'https://github.com/alanmox/fingerprint-web',
     problem:
       'Manual intake workflows needed a cleaner way to capture thumb images from mobile devices and produce printable administrative records.',
@@ -133,6 +135,7 @@ const projects = [
       'Full-stack authentication starter with signup verification, JWT login, forgot-password flow, and reset-password lifecycle for secure account handling.',
     stack: ['Next.js', 'Express', 'MySQL', 'JWT'],
     label: 'Security Foundation',
+    image: '/emailauth1.jpg',
     href: 'https://github.com/alanmox/Email-verification-allanmox',
     problem:
       'Starter products often launch without secure, production-minded authentication and account recovery foundations.',
@@ -627,7 +630,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="h-12 w-full rounded-full border border-white/20 bg-white px-7 text-foreground shadow-[0_18px_35px_-20px_rgb(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/90 sm:w-auto"
+                className="h-12 w-full rounded-full border border-white/15 bg-white/10 px-7 text-white/90 backdrop-blur-sm shadow-[0_18px_35px_-20px_rgb(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20 sm:w-auto"
               >
                 <Link href="mailto:alanmox441@gmail.com">Start a conversation</Link>
               </Button>
